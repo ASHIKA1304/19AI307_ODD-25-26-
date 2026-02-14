@@ -29,8 +29,8 @@ To write a Java program to implement methods in Java by passing a string as a pa
 ## PROGRAM:
  ```
 Program to implement a Methods using Java
-Developed by: NITHYA S
-RegisterNumber: 212224240106
+Developed by:ASHIKA TR
+RegisterNumber: 212224220011
 
 ```
 
@@ -61,6 +61,7 @@ class prog{
 
 ## RESULT:
 The program to implement methods in Java was successfully executed and displayed a greeting message using a parameterized method.
+
 
 
 
