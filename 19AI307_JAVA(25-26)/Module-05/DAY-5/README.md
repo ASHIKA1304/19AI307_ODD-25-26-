@@ -35,8 +35,8 @@ To write a Java program that demonstrates the use of the synchronized block by s
 ## PROGRAM:
  ```
 Program to implement a Synchronization concept using Java
-Developed by: NITHYA S
-RegisterNumber: 212224240106
+Developed by: ASHIKA TR
+RegisterNumber: 212224220011
 ```
 
 ## SOURCE CODE:
@@ -76,6 +76,7 @@ public class SwapUsingSync {
 
 ## RESULT:
 The program successfully demonstrates synchronization by swapping two numbers within a synchronized block, ensuring thread-safe execution even though only one thread is used.
+
 
 
 
