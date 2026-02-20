@@ -1,90 +1,121 @@
-# Ex.No:3(C) ABSTRACTION
+# Ex.No:2(C) ACCESS SPECIFIERS
 
 ## QUESTION:
-Create abstract class BankAccount with method calculateInterest(). Extend it in SavingsAccount and FixedDepositAccount.
--  Input Format:
--  First line: 1 for SavingsAccount, 2 for FixedDepositAccount
-- If 1: next line → balance (double)
-- If 2: next line → amount (double) and years (int)
-- Output Format:
-- A single line showing interest earned rounded to 2 decimal places.
-- For example:
-<img width="161" height="207" alt="image" src="https://github.com/user-attachments/assets/c79ccbd0-6bbe-487c-807b-c1b6df8cbf1b" />
-
+Write a Java program to create a class called Smartphone with private instance variables brand, model, and storageCapacity. Provide public getter and setter methods to access and modify these variables. Add a method called increaseStorage() that takes an integer value and increases the storageCapacity by that value.
 
 ## AIM:
-To write a Java program that demonstrates runtime polymorphism using an abstract class BankAccount and its subclasses to calculate interest for Savings and Fixed Deposit accounts.
+To implement access specifiers in Java using private variables and public getter and setter methods.
+
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	Read the account type from the user.
-4. If the user selects Savings, read balance and create a SavingsAccount object; otherwise, read amount and years to create a FixedDepositAccount object.
-5. Store the object in the base class reference BankAccount.
-6. Call the calculateInterest() method using runtime polymorphism.
-7. Display the calculated interest.
+1.Start the program.
+
+2.Import the necessary package java.util.
+
+3.Create a class Smartphone with private variables.
+
+4.Create public getter and setter methods to access private data members.
+
+5.Create a method increaseStorage(int value) to increase storage.
+
+6.In the main method, get user input.
+
+7.Create an object of Smartphone and call the methods.
+
+8.Display updated details.
+
+9.End the program.
+
+
 
 ## PROGRAM:
  ```
-Program to implement a Abstraction using Java
+Program to implement a Access Specifiers using Java
 Developed by: ASHIKA TR
 RegisterNumber: 212224220011
 ```
 
 ## SOURCE CODE:
-```
-import java.util.*;
-abstract class BankAccount {
-    abstract double calculateInterest();
-}
+```java
+import java.util.Scanner;
 
-class SavingsAccount extends BankAccount {
-    double balance;
-    SavingsAccount(double balance) {
-        this.balance = balance;
-    }
-    double calculateInterest() {
-        return balance * 0.04;
-    }
-}
+class prog {
+    private String brand;
+    private String model;
+    private int storageCapacity;
 
-class FixedDepositAccount extends BankAccount {
-    double amount;
-    int years;
-    FixedDepositAccount(double amount, int years) {
-        this.amount = amount;
-        this.years = years;
+    
+    public String getBrand() {
+        return brand;
     }
-    double calculateInterest() {
-        return amount * 0.07 * years;
-    }
-}
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int type = sc.nextInt();
-        BankAccount account;
-        if (type == 1) {
-            double balance = sc.nextDouble();
-            account = new SavingsAccount(balance);
-        } else {
-            double amount = sc.nextDouble();
-            int years = sc.nextInt();
-            account = new FixedDepositAccount(amount, years);
+    public String getModel() {
+        return model;
+    }
+
+    public int getStorageCapacity() {
+        return storageCapacity;
+    }
+
+    
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setStorageCapacity(int storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
+
+   
+    public void increaseStorage(int value) {
+        if (value > 0) {
+            this.storageCapacity += value;
         }
-        System.out.printf("%.2f", account.calculateInterest());
+    }
+
+    
+    public void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Updated Storage Capacity: " + storageCapacity + " GB");
+        System.out.println("------------------------------");
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String brand=sc.nextLine();
+        String Model=sc.nextLine();
+        int storageCapacity=sc.nextInt();
+        int increaseValue=sc.nextInt();
+        prog obj=new prog();
+        obj.setBrand(brand);
+        obj.setModel(Model);
+        obj.setStorageCapacity(storageCapacity);
+        obj.getBrand();
+        obj.getModel();
+        obj.getStorageCapacity();
+        obj.increaseStorage(increaseValue);
+        obj.display();
     }
 }
 ```
+
 
 
 ## OUTPUT:
+<img width="1277" height="565" alt="image" src="https://github.com/user-attachments/assets/b5c216b1-7bf2-4bd7-bfb2-4ccdebbee2cc" />
 
-<img width="410" height="373" alt="image" src="https://github.com/user-attachments/assets/967d446a-59be-4821-9d42-13a04bc22c25" />
 
 ## RESULT:
-The program successfully demonstrates runtime polymorphism using an abstract class. Depending on the account type entered by the user, the appropriate calculateInterest() method from the corresponding subclass is executed, and the interest amount is correctly displayed.
+The program successfully implemented access specifiers using private instance variables and public getter and setter methods in Java.
+
+
+
+
+
 
 
 
